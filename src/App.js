@@ -4,6 +4,10 @@ import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
 import Nav from './components/Nav'
+import Post from './components/Post'
+import PrivateRoute from './PrivateRoute'
+import Login from './components/Login'
+import LogOut from './components/LogOut'
 
 class App extends Component {
 
@@ -16,6 +20,9 @@ class App extends Component {
           <Route path='/' exact component={Home} />
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
+          <PrivateRoute path='/post/:postID' component={Post} />
+          <Route path='/login' component={Login} />
+          <Route path='/logout' component={LogOut} />
           </Switch>
         </div>
       </BrowserRouter >
